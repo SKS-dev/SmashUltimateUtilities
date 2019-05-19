@@ -8,6 +8,7 @@ root = Tk()
 root.geometry("500x700")
 root.title("Smash Ultimate Character Index")
 root.grid
+root.configure(background='#353332')
 global name
 global photo1
 photo1 = PhotoImage(file="900.png")
@@ -20,8 +21,7 @@ def LUIGI():
         photo1 = PhotoImage(file="LUIGI.png")
         global name
         name = ("LUIGI")
-
-def WARIO():
+def WARIO():   
     if (ooga == 2):
         print("WARIO")
         global photo1
@@ -45,13 +45,11 @@ def gen():
     LUIGI()
     WARIO()
     KROOL()
-    Label(root, image=photo1, bg="black") .grid(row=5, column=0)
-    Label (root, text=name) .grid (row=0, column=1)
+    Label(root, image=photo1, bg="#353332") .grid(row=2, column=2)
+    Label (root, text=name, bg='white') .grid (row=1, column=1)
 #ooga booga 
 
-
-   
-Button(root, text="Submit", command=gen) .grid(row=0, column=0,sticky=W)
+Button(root, text="Submit", command=gen) .grid(row=1, column=0,sticky=W)
 root.mainloop()
 
 #HAHHSHDSAHDSHDHSAD
